@@ -1,33 +1,111 @@
-#index{
-	background-image: url("unknown.png");
-	background-color: #ffc800;
+.home{
+	background-color: #5f98c6;
+
 }
 
-.container{
-	margin-top: 200px;
-	background-color: rgba(255,255,255,0.95);
-	border-radius: 10px;
-	width: 100px;
+#back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-color: #BADA55;
+  height: 600px;
+  width: 400px;
+  border-radius: 15px 15px 50px 15px;
 }
 
-input{
-   text-align:center;
-   text-transform: uppercase;
-   border-color: black;
+#screen {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: #494949;
+  height: 280px;
+  width: 360px;
+  border-radius: 5px 5px 40px 5px;
 }
 
-#aa-form-input {
-	margin-top: 50px;
-	height: 50px;
+#subscreen {
+  position: absolute;
+  height: 218px;
+  width: 250px;
+  top: 75px;
+  left: 105px;
+  border-radius: 3px 3px 3px 3px;
+  background-color: #b7b28f;
 }
 
-#aa-form-button{
-	margin-top: 20px;
-	margin-bottom: 50px;
-	background-color: black;
-	border-color: black;
-	text-fill-color: white;
-	color: white;
-	height: 50px;
+#joystickH {
+  position: absolute;
+  background-color: #484848;
+  height: 85px;
+  width: 30px;
+  top: 375px;
+  left: 92px;
+  border-radius: 3px 3px 3px 3px;
 }
 
+#joystickV {
+  position: absolute;
+  background-color: #484848;
+  height: 30px;
+  width: 85px;
+  top: 400px;
+  left: 65px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+#joystickBack {
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  background-color: #dddddd;
+  border-radius: 55px 55px 55px 55px;
+  top: 363px;
+  left: 53px;
+}
+
+#aButton {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #484848;
+  top: 409px;
+  left: 300px;
+  position: absolute;
+}
+#bButton {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #484848;
+  top: 375px;
+  left: 346px;
+  position: absolute;
+}
+
+#start {
+  height: 10px;
+  width: 37px;
+  position: absolute;
+  background-color: #484848;
+  top: 574px;
+  left: 193px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+#select {
+  height: 10px;
+  width: 37px;
+  position: absolute;
+  background-color: #484848;
+  top: 574px;
+  left: 250px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+#gameboyText {
+  position: absolute;
+  left: 131px;
+  top: 295px;
+  font: 19px "Comic Sans MS";
+  color: #b7b28f;
+}
