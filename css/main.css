@@ -1,3 +1,68 @@
+@font-face {
+    font-family: moon;
+    src: url(../assets/moon.otf);
+}
+
+@font-face {
+    font-family: pier;
+    src: url(../assets/pier.otf);
+}
+
+#logo {
+	padding: 0px 20px;
+}
+
+#nav {
+	background-image: none !important;
+	border: none;
+	background-color: transparent !important;
+	padding: 35px 50px;
+	height: 20vh;
+	box-shadow: none;
+}
+
+#nav a {
+	font-family: "moon";
+	color: black;
+	font-weight: 500;
+	padding-left: 30px; 
+	font-size: 15px;
+}
+
+#nav a:hover {
+	color: gray;
+}
+
+section {
+	height: 100vh;
+}
+
+#home {
+	padding-top: 100px;
+	padding-left: 80px;
+}
+
+#home > div {
+	font-family: "moon";
+}
+
+#home > div:nth-child(1) {
+	font-size: 60px;
+}
+
+
+#home > div:nth-child(2) {
+	font-size: 20px;
+}
+
+
+#about > span {
+	display: block;
+	text-align: center;
+	font-size: 60px;
+	font-family: "moon";
+}
+/*
 .home{
 	background-color: #5f98c6;
 
@@ -109,3 +174,4 @@
   font: 19px "Comic Sans MS";
   color: #b7b28f;
 }
+*/
