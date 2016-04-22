@@ -1,7 +1,7 @@
 angular.module("directives", ['ngRoute'])
 	.controller('mainCtrl', [ '$scope', '$sce',  function($scope, $sce){
+		console.log('main');	
 
-		
 	}])	
 
 	.controller('digitalArtCtrl', ['$scope', '$sce',function($scope, $sce){
@@ -11,12 +11,15 @@ angular.module("directives", ['ngRoute'])
 					  ]
 	}])
 
-	.controller('aboutSectionsCtrl', ['$scope', '$sce',function($scope, $sce){		
+	.controller('aboutSectionsCtrl', ['$scope', '$sce',function($scope, $sce){	
+		console.log('about');	
 		$('html, body').animate({
 		    scrollTop: $("#about").offset().top
 		}, 1000);
 	}])
-	.controller('homeSectionsCtrl', ['$scope', '$sce',function($scope, $sce){		
+	.controller('homeSectionsCtrl', ['$scope', '$sce',function($scope, $sce){
+		console.log('home');	
+		
 		$('html, body').animate({
 		    scrollTop: $("#home").offset().top
 		}, 1000);
