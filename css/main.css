@@ -8,6 +8,11 @@
     src: url(../assets/pier.otf);
 }
 
+* 
+{
+	font-family: "moon";
+}
+
 #logo {
 	padding: 0px 20px;
 }
@@ -37,13 +42,17 @@ section {
 	height: 100vh;
 }
 
+section h1{
+	font-size: 60px;
+	display: block;
+	text-align: center;
+}
+
+
+
 #home {
 	padding-top: 100px;
 	padding-left: 80px;
-}
-
-#home > div {
-	font-family: "moon";
 }
 
 #home > div:nth-child(1) {
@@ -55,13 +64,7 @@ section {
 	font-size: 20px;
 }
 
-
-#about > span {
-	display: block;
-	text-align: center;
-	font-size: 60px;
-	font-family: "moon";
-}
+#
 /*
 .home{
 	background-color: #5f98c6;

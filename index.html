@@ -26,32 +26,24 @@
 					</div>  
 					<div class="navbar-right collapse navbar-collapse collapse" id="bs-example-navbar-collapse-9"> 
 						<ul class="nav navbar-nav"> 
-							<li><a href="#home">Home</a></li> 
+							<li><a href="#/home">Home</a></li> 
 							<li><a href="#about">About</a></li> 
 							<li><a href="assets/Ahmed_Aly_Resume.pdf">Resume</a></li> 
-							<li><a href="digitalArt">Engineering Portfolio</a></li> 
-							<li><a href="#">Art</a></li>
+							<li><a href="#/digitalArt">Engineering Portfolio</a></li> 
+							<li><a href="#art">Art</a></li>
 							<li><a href="#">Contact</a></li>
 						</ul> 
 					</div> 
 				</div> 
 			</nav>
-			<div ng-hide="portfolio">
-			<section class="col-xs-12" id="home">
-				<div>Hi, I'm Ahmed! </div>
-				<div>I am a full stack software engineer with an interest in art and design</div>
-			</section>
-			
-			<section class="col-xs-12" id="about">
-				<span>About</span>
-			</section>
+			<div ng-view>
+				
 			</div>
-			<aa-digitalart ng-show="portfolio"></aa-digitalart>
-			<pre>{{portfolio}}</pre>
 
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-		<script src="js/directives.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
+        <script src="js/directives.js"></script>
 	</body>
 </html>

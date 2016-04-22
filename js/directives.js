@@ -1,72 +1,19 @@
-angular.module("directives", [])
-	.controller('mainCtrl', [ '$scope', '$sce', 'route', function($scope, $sce, $route){
-		$scope.$route = $route;
-		
+angular.module("directives", ['ngRoute'])
+	.controller('mainCtrl', [ '$scope', '$sce',  function($scope, $sce){
 
-		$scope.showSection = function(section) {
-			console.log('here');
-			$scope.portfolio = false;
-			if(section == "portfolio"){
-				$scope.portfolio = true;
-				console.log('nice!')
-			}
-		}
 		
-	}])
+	}])		
 	
-	
-	.controller('digitalArtCtrl', ['$scope', '$sce',function($scope, $sce, $routeParams){
+	.controller('digitalArtCtrl', ['$scope', '$sce',function($scope, $sce){
 		$scope.imageUrls= [
 						'assets/IMG_0196.JPG',
 						'assets/IMG_0225.JPG'
 					  ]
-		$scope.name = "digitalArtCtrl";
-		$scope.params = $routeParams
 	}])
-	
-	.config(function($routeProvider, $locationProvider) {
-	  $routeProvider
-	   .when('/Book/:bookId', {
-	    templateUrl: 'book.html',
-	    controller: 'BookController',
-	    resolve: {
-	      // I will cause a 1 second delay
-	      delay: function($q, $timeout) {
-	        var delay = $q.defer();
-	        $timeout(delay.resolve, 1000);
-	        return delay.promise;
-	      }
-	    }
-	  })
-	  .when('/digitalArt', {
-	    templateUrl: 'views/digitalArt.html',
-	    controller: 'digitalArtCtrl'
-	  });
-	
-	});
-/*
-	.directive("aaDigitalart", function()
-	{
-		return {
-			restrict: "AE",
-			scope: { },
-			templateUrl: "views/digitalArt.html",
-			controller: "digitalArtCtrl"
-		};
-	})
-	
-*/
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	.controller('mainSectionsCtrl', ['$scope', '$sce',function($scope, $sce){
+
+	}])
 
 	.controller('gameboyCtrl', ['$scope', '$sce',function($scope, $sce){
 		$scope.parts= [
@@ -102,6 +49,7 @@ angular.module("directives", [])
 			$scope.buttonString += " + " + button;
 		}
 	}])
+	
 	.directive("aaGameboy", function()
 	{
 		return {
@@ -110,4 +58,14 @@ angular.module("directives", [])
 			templateUrl: "views/gameboy.html",
 			controller: "gameboyCtrl"
 		};
-	});
+	})
+
+	
+	
+	.config(['$routeProvider', function($routeProvider){
+                $routeProvider
+                .when('/digitalArt',{controller:"digitalArtCtrl", templateUrl:'views/digitalArt.html'})
+                .when('/',{controller:"mainSectionsCtrl", templateUrl:'views/mainSections.html'});
+     }]);
+	
+	
