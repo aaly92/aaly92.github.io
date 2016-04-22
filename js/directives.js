@@ -97,6 +97,7 @@ angular.module("directives", ['ngRoute'])
                 .when('/about',{controller:"aboutSectionsCtrl", templateUrl:'views/mainSections.html'})
                 .when('/home',{controller:"homeSectionsCtrl", templateUrl:'views/mainSections.html'})
                 .when('/projects',{controller:"projectsSectionCtrl", templateUrl:'views/projects.html'})
+                .when('/gameboy',{controller:"gameboyCtrl", templateUrl:"views/gameboy.html"})
                 .otherwise({redirectTo:'/'});
                 ;
      }]);
