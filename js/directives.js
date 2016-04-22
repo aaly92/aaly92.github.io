@@ -12,7 +12,7 @@ angular.module("directives", ['ngRoute'])
 	}])
 
 	.controller('mainSectionsCtrl', ['$scope', '$sce',function($scope, $sce){
-		$("#about").animate({scrollTop: $elm.offset().top}, "slow");
+		document.getElementById("about").scrollIntoView();
 	}])
 
 	.controller('gameboyCtrl', ['$scope', '$sce',function($scope, $sce){
