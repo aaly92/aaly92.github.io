@@ -1,0 +1,204 @@
+/*
+*       unblackedges.c
+*       by Ahmed Aly & Aditi Ashok, 2/5/14
+*       homework 2
+*
+*       removes black edges from a scanned image.
+*/
+
+#include <stdlib.h>
+#include <stdio.h> 
+#include <bit2.h>
+#include <pnmrdr.h>
+#include <stdbool.h>
+#include <stack.h>
+
+
+typedef struct Stack_T *S;
+typedef struct Bit2_T *T;
+
+extern T input_image(FILE *fp);
+extern void print_arr (T bit2);
+extern bool isBlack (int row, int col, T bit2);
+extern void whiten_edge(T bit2, int row , int col);
+extern bool inBound (int row, int col, T bit2);
+extern void unblacken_all(T bit2);
+extern void output_image(T bit2);
+
+typedef struct Coord {
+        int row;
+        int col;
+} Coord;
+
+const int WHITE = 0;
+const int BLACK = 1;
+
+int main (int argc, char *argv[])
+{
+        if (argc > 2) {
+                fprintf (stderr, "Too many arguments\n");
+                exit (1);
+        }
+        if (argc == 1) {
+                T bit2 = input_image(stdin);
+                unblacken_all(bit2);
+                output_image(bit2);
+                Bit2_free (&bit2);
+                
+        } else {
+                FILE *fp = fopen(argv[1], "r");
+                if (fp == NULL){
+                        fprintf(stderr,
+                                "%s: %s %s %s\n",
+                                argv[0], "Could not open file ",
+                                argv[1], "For reading");
+                                exit(1);
+                }
+                T bit2 = input_image(fp);     
+                unblacken_all(bit2);
+                output_image(bit2);
+                Bit2_free(&bit2);
+                fclose(fp);
+        }
+}
+
+T input_image (FILE *fp) {
+         TRY
+                Pnmrdr_T my_rdr = Pnmrdr_new(fp);
+                Pnmrdr_mapdata md = Pnmrdr_data(my_rdr);
+                T bit2 = Bit2_new(md.height, md.width);
+                int x;
+                unsigned h= md.height;
+                unsigned w = md.width;
+                for (unsigned row = 0; row < h; row++) {
+                        for (unsigned col = 0; col < w; col++) {
+                                x =Pnmrdr_get(my_rdr);
+                                Bit2_put(bit2 , row , col , x);
+                                
+                        }
+                }
+                Pnmrdr_free(&my_rdr);
+                return bit2;
+        EXCEPT (Pnmrdr_Badformat)
+                fprintf(stderr, "Bad FORMAT\n");
+                exit (1);
+        EXCEPT (Pnmrdr_Count)
+                fprintf(stderr, "Bad COUNT\n");
+                exit (1); 
+        END_TRY;
+        return NULL;
+}
+
+bool isBlack (int row, int col, T bit2) {
+       if (!inBound (row, col, bit2)){
+                return false;
+       } 
+       
+       int x = Bit2_get(bit2, row, col);
+       if (x == BLACK) {
+                return true;
+        }
+        return false;
+}
+
+bool inBound (int row, int col, T bit2) {
+        int height = Bit2_height(bit2);
+        int width = Bit2_width(bit2);
+        if (row < 0 || row > height-1 || 
+            col <0 || col > width-1) {
+                return false;
+        }
+        return true; 
+}
+
+
+/* deals with a single edge given rows and cols as parameters */
+void whiten_edge(T bit2, int row , int col)
+{       
+        Coord *cd = malloc(sizeof(*cd));
+        S stack = Stack_new();
+                
+        if (isBlack (row, col, bit2)) {
+                cd->row=row;
+                cd->col=col;
+                Stack_push (stack, cd);
+        }
+        
+        while (!Stack_empty(stack)) {                       
+                cd = Stack_pop(stack);
+                Bit2_put(bit2 , cd->row , cd->col , WHITE);
+                
+                if (isBlack(cd->row-1,cd->col, bit2)) {
+                       Coord *cd1 = malloc(sizeof(cd1));        
+                       cd1->row = cd->row-1;
+                       cd1->col = cd->col;
+                       Stack_push (stack, cd1);
+                }
+                if (isBlack(cd->row+1,cd->col, bit2)) {
+                       Coord *cd2 = malloc(sizeof(cd2)); 
+                       cd2->row = cd->row+1;
+                       cd2->col = cd->col;
+                       Stack_push (stack, cd2);
+                }
+                if (isBlack(cd->row,cd->col-1, bit2)) {
+                        Coord *cd3 = malloc(sizeof(cd3));
+                        cd3->row = cd->row;
+                        cd3->col = cd->col-1;
+                        Stack_push (stack, cd3); 
+                }
+                
+                if (isBlack(cd->row,cd->col+1, bit2)){
+                        Coord *cd4 = malloc(sizeof(cd4));
+                        cd4->row = cd->row;
+                        cd4->col = cd->col+1;
+                        Stack_push (stack, cd4); 
+                }
+                free(cd);
+        }
+        Stack_free(&stack);
+}
+
+void unblacken_all(T bit2) {
+        int height = Bit2_height(bit2);
+        int width = Bit2_width(bit2);
+        
+        int row_border = Bit2_height(bit2)-1;
+        int col_border = Bit2_width(bit2)-1;
+        
+        for (int col = 0; col < width; col++) {
+                if (isBlack(0,col,bit2)) {
+                        whiten_edge(bit2, 0, col);
+                }
+                if (isBlack(row_border, col, bit2)) {
+                        whiten_edge(bit2, row_border, col);
+                }
+        }
+        
+        for (int row = 0; row < height; row++) {
+                if (isBlack(row, 0, bit2)) {
+                        whiten_edge(bit2, row, 0);
+                }
+                if (isBlack(row, col_border, bit2)) {
+                        whiten_edge(bit2, row, col_border);
+                }
+        }
+
+}
+
+/* prints image to stdout in pbm P1 format*/
+void output_image(T bit2) {
+        int w = Bit2_width(bit2);
+        int h = Bit2_height (bit2);
+        int x;
+        
+        printf("P1\n");
+        printf("%d %d\n", w, h);
+        for (int r = 0; r < h; r++) {
+                for(int c = 0; c < w; c++) {
+                        x = Bit2_get(bit2, r, c);
+                        printf("%d", x);
+                }
+                printf( "\n");
+        }
+        printf( "\n");
+}

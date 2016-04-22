@@ -20,6 +20,11 @@ angular.module("directives", ['ngRoute'])
 						'assets/art/012.png'
 					  ]
 	}])
+	
+	.controller('projectsSectionCtrl', ['$scope', '$sce',function($scope, $sce){	
+
+	}])
+	
 
 	.controller('aboutSectionsCtrl', ['$scope', '$sce',function($scope, $sce){	
 		console.log('about');	
@@ -88,6 +93,7 @@ angular.module("directives", ['ngRoute'])
                 .when('/',{controller:"mainCtrl", templateUrl:'views/mainSections.html'})
                 .when('/about',{controller:"aboutSectionsCtrl", templateUrl:'views/mainSections.html'})
                 .when('/home',{controller:"homeSectionsCtrl", templateUrl:'views/mainSections.html'})
+                .when('/projects',{controller:"projectsSectionCtrl", templateUrl:'views/projects.html'})
                 .otherwise({redirectTo:'/'});
                 ;
      }]);
