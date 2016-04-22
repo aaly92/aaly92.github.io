@@ -20,11 +20,15 @@
 #nav {
 	background-image: none !important;
 	border: none;
-	background-color: transparent !important;
+	background-color: white !important;
 	padding: 35px 50px;
 	height: 20vh;
 	box-shadow: none;
 	position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
 }
 
 #nav a {
@@ -52,7 +56,7 @@ section h1{
 
 
 #home {
-	padding-top: 100px;
+	padding-top: 20vh;
 	padding-left: 80px;
 }
 
