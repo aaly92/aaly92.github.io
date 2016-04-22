@@ -17,7 +17,7 @@ angular.module("directives", ['ngRoute'])
 						'assets/art/009.png',
 						'assets/art/010.png',
 						'assets/art/011.png',
-						'assets/art/012.png',
+						'assets/art/012.png'
 					  ]
 	}])
 
