@@ -17,6 +17,13 @@ angular.module("directives", ['ngRoute'])
 		    scrollTop: $("#about").offset().top
 		}, 1000);
 	}])
+	.controller('homeSectionsCtrl', ['$scope', '$sce',function($scope, $sce){
+		console.log('home');	
+		
+		$('html, body').animate({
+		    scrollTop: $("#home").offset().top
+		}, 1000);
+	}])
 
 	.controller('gameboyCtrl', ['$scope', '$sce',function($scope, $sce){
 		$scope.parts= [
@@ -70,6 +77,7 @@ angular.module("directives", ['ngRoute'])
                 .when('/digitalArt',{controller:"digitalArtCtrl", templateUrl:'views/digitalArt.html'})
                 .when('/',{controller:"mainCtrl", templateUrl:'views/mainSections.html'})
                 .when('/about',{controller:"aboutSectionsCtrl", templateUrl:'views/mainSections.html'})
+                .when('/home',{controller:"homeSectionsCtrl", templateUrl:'views/mainSections.html'})
                 .otherwise({redirectTo:'/'});
                 ;
      }]);
