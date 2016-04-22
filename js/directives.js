@@ -11,9 +11,15 @@ angular.module("directives", ['ngRoute'])
 					  ]
 	}])
 
-	.controller('mainSectionsCtrl', ['$scope', '$sce',function($scope, $sce){
-		console.log('running');
-		document.getElementById("#about").scrollIntoView({behavior:'smooth'});
+	.controller('aboutSectionsCtrl', ['$scope', '$sce',function($scope, $sce){		
+		$('html, body').animate({
+		    scrollTop: $("#about").offset().top
+		}, 1000);
+	}])
+	.controller('homeSectionsCtrl', ['$scope', '$sce',function($scope, $sce){		
+		$('html, body').animate({
+		    scrollTop: $("#home").offset().top
+		}, 1000);
 	}])
 
 	.controller('gameboyCtrl', ['$scope', '$sce',function($scope, $sce){
@@ -66,7 +72,8 @@ angular.module("directives", ['ngRoute'])
 	.config(['$routeProvider', function($routeProvider){
                 $routeProvider
                 .when('/digitalArt',{controller:"digitalArtCtrl", templateUrl:'views/digitalArt.html'})
-                .when('/',{controller:"mainSectionsCtrl", templateUrl:'views/mainSections.html'})
+                .when('/',{controller:"homeSectionsCtrl", templateUrl:'views/mainSections.html'})
+                .when('/about',{controller:"aboutSectionsCtrl", templateUrl:'views/mainSections.html'})
                 .otherwise({redirectTo:'/'});
                 ;
      }]);
