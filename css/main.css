@@ -93,6 +93,10 @@ section h1{
 
 }
 
+.project {
+	margin-bottom: 20px;
+}
+
 #back {
   position: absolute;
   top: 30px;
