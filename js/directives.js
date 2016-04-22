@@ -2,8 +2,8 @@ angular.module("directives", ['ngRoute'])
 	.controller('mainCtrl', [ '$scope', '$sce',  function($scope, $sce){
 
 		
-	}])		
-	
+	}])	
+
 	.controller('digitalArtCtrl', ['$scope', '$sce',function($scope, $sce){
 		$scope.imageUrls= [
 						'assets/IMG_0196.JPG',
@@ -72,8 +72,9 @@ angular.module("directives", ['ngRoute'])
 	.config(['$routeProvider', function($routeProvider){
                 $routeProvider
                 .when('/digitalArt',{controller:"digitalArtCtrl", templateUrl:'views/digitalArt.html'})
-                .when('/',{controller:"homeSectionsCtrl", templateUrl:'views/mainSections.html'})
+                .when('/',{controller:"mainCtrl", templateUrl:'views/mainSections.html'})
                 .when('/about',{controller:"aboutSectionsCtrl", templateUrl:'views/mainSections.html'})
+                .when('/home',{controller:"aboutSectionsCtrl", templateUrl:'views/mainSections.html'})
                 .otherwise({redirectTo:'/'});
                 ;
      }]);
