@@ -12,7 +12,8 @@ angular.module("directives", ['ngRoute'])
 	}])
 
 	.controller('mainSectionsCtrl', ['$scope', '$sce',function($scope, $sce){
-		document.getElementById("about").scrollIntoView();
+		console.log('running');
+		document.getElementById("#about").scrollIntoView();
 	}])
 
 	.controller('gameboyCtrl', ['$scope', '$sce',function($scope, $sce){
