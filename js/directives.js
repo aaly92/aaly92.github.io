@@ -6,9 +6,18 @@ angular.module("directives", ['ngRoute'])
 
 	.controller('digitalArtCtrl', ['$scope', '$sce',function($scope, $sce){
 		$scope.imageUrls= [
-						'assets/art/001',
-						'assets/art/002',
-						'assets/art/003',
+						'assets/art/001.png',
+						'assets/art/002.png',
+						'assets/art/003.png',
+						'assets/art/004.png',
+						'assets/art/005.png',
+						'assets/art/006.png',
+						'assets/art/007.png',
+						'assets/art/008.png',
+						'assets/art/009.png',
+						'assets/art/010.png',
+						'assets/art/011.png',
+						'assets/art/012.png',
 					  ]
 	}])
 
