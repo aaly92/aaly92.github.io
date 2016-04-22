@@ -77,7 +77,7 @@ angular.module("directives", ['ngRoute'])
                 .when('/digitalArt',{controller:"digitalArtCtrl", templateUrl:'views/digitalArt.html'})
                 .when('/',{controller:"mainCtrl", templateUrl:'views/mainSections.html'})
                 .when('/about',{controller:"aboutSectionsCtrl", templateUrl:'views/mainSections.html'})
-                .when('/home',{controller:"aboutSectionsCtrl", templateUrl:'views/mainSections.html'})
+                .when('/home',{controller:"homeSectionsCtrl", templateUrl:'views/mainSections.html'})
                 .otherwise({redirectTo:'/'});
                 ;
      }]);
