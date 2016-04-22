@@ -97,6 +97,10 @@ section h1{
 	margin-bottom: 20px;
 }
 
+.project img {
+	border-radius: 25px;
+}
+
 #back {
   position: absolute;
   top: 30px;
