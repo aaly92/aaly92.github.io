@@ -36,7 +36,6 @@
 
 #nav.navWhite {
 	background-color: white !important;
-
 }
 
 
@@ -45,7 +44,6 @@
 		background-color:#ffffff;
 	}
 }
-
 
 #nav a {
 	font-family: "moon";
@@ -59,7 +57,6 @@
 	#nav a:hover {
 		color: gray;
 	}
-	
 	
 	#nav .navbar-right a:after {
 		content: '';
@@ -118,8 +115,6 @@ section h1{
 	}
 }
 
-
-
 #textOverlay {
 	font-size: 60px;
 	position: absolute;
@@ -132,6 +127,12 @@ section h1{
     height: 100%;
     text-align: center;
 
+}
+
+@media(max-width:767px){
+	#textOverlay {
+	    font-size: 40px;
+	}
 }
 
 #home > div:nth-child(1) {
