@@ -1,7 +1,9 @@
 angular.module("directives", ['ngRoute'])
 	.controller('mainCtrl', [ '$scope', '$sce',  function($scope, $sce){
 		console.log('main');	
+		$( "#nav" ).removeClass( "navWhite" );
 		$( "#nav" ).addClass( "navTrans" );
+	
 
 	}])	
 
@@ -29,19 +31,22 @@ angular.module("directives", ['ngRoute'])
 	}])
 	
 	.controller('projectsSectionCtrl', ['$scope', '$sce',function($scope, $sce){	
+		$( "#nav" ).removeClass( "navTrans" );
 		$( "#nav" ).addClass( "navWhite" );
 	}])
 	
 
 	.controller('aboutSectionsCtrl', ['$scope', '$sce',function($scope, $sce){	
 		console.log('about');	
+		$( "#nav" ).removeClass( "navTrans" );
 		$( "#nav" ).addClass( "navWhite" );
 		$('html, body').animate({
 		    scrollTop: $("#about").offset().top
 		}, 1000);
 	}])
 	.controller('homeSectionsCtrl', ['$scope', '$sce',function($scope, $sce){
-		console.log('home');	
+		console.log('home');
+		$( "#nav" ).removeClass( "navWhite" );	
 		$( "#nav" ).addClass( "navTrans" );
 		$('html, body').animate({
 		    scrollTop: $("#home").offset().top
