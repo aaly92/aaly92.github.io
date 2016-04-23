@@ -40,8 +40,8 @@ angular.module("directives", ['ngRoute'])
 
 	.controller('aboutSectionsCtrl', ['$scope', '$sce',function($scope, $sce){	
 		console.log('about');	
-		$( "#nav" ).removeClass( "navTrans" );
-		$( "#nav" ).addClass( "navWhite" );
+		$( "#nav" ).removeClass( "navWhite" );
+		$( "#nav" ).addClass( "navTrans" );
 		$('html, body').animate({
 		    scrollTop: $("#about").offset().top
 		}, 1000);
