@@ -3,6 +3,26 @@ angular.module("directives", ['ngRoute'])
 		console.log('main');	
 		$( "#nav" ).removeClass( "navWhite" );
 		$( "#nav" ).addClass( "navTrans" );
+		
+		$(function () {
+		    $(window).scroll(function () {
+		        if ($(this).scrollTop() > 300) {
+		            $('.arrow').fadeOut();
+		        } else {
+		            $('.arrow').fadeIn();
+		        }
+		    });
+		
+/*
+		    // scroll body to 0px on click
+		    $('.back-top').click(function () {
+		        $('body,html').animate({
+		            scrollTop: 0
+		        }, 1600);
+		        return false;
+		    });
+*/
+		});
 	
 
 	}])	
