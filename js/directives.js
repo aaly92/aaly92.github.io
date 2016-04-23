@@ -126,8 +126,6 @@ angular.module("directives", ['ngRoute'])
                 $routeProvider
                 .when('/digitalArt',{controller:"digitalArtCtrl", templateUrl:'views/digitalArt.html'})
                 .when('/',{controller:"mainCtrl", templateUrl:'views/mainSections.html'})
-                .when('/about',{controller:"aboutSectionsCtrl", templateUrl:'views/mainSections.html'})
-                .when('/home',{controller:"homeSectionsCtrl", templateUrl:'views/mainSections.html'})
                 .when('/projects',{controller:"projectsSectionCtrl", templateUrl:'views/projects.html'})
                 .when('/gameboy',{controller:"gameboyCtrl", templateUrl:"views/gameboy.html"})
                 .otherwise({redirectTo:'/'});
