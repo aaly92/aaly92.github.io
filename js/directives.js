@@ -1,6 +1,19 @@
 angular.module("directives", ['ngRoute'])
 	.controller('mainCtrl', [ '$scope', '$sce',  function($scope, $sce){
-		console.log('main');	
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+		    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		      if (target.length) {
+		        $('html,body').animate({
+		          scrollTop: target.offset().top
+		        }, 1000);
+		        return false;
+		      }
+		    }
+		  });
+		});
 		$( "#nav" ).removeClass( "navWhite" );
 		$( "#nav" ).addClass( "navTrans" );
 		
@@ -57,24 +70,6 @@ angular.module("directives", ['ngRoute'])
 		$( "#nav" ).addClass( "navWhite" );
 	}])
 	
-
-	.controller('aboutSectionsCtrl', ['$scope', '$sce',function($scope, $sce){	
-		console.log('about');	
-		$( "#nav" ).removeClass( "navWhite" );
-		$( "#nav" ).addClass( "navTrans" );
-		$('html, body').animate({
-		    scrollTop: $("#about").offset().top
-		}, 1000);
-	}])
-	.controller('homeSectionsCtrl', ['$scope', '$sce',function($scope, $sce){
-		console.log('home');
-		$( "#nav" ).removeClass( "navWhite" );	
-		$( "#nav" ).addClass( "navTrans" );
-		$('html, body').animate({
-		    scrollTop: $("#home").offset().top
-		}, 1000);
-	}])
-
 	.controller('gameboyCtrl', ['$scope', '$sce',function($scope, $sce){
 		$scope.parts= [
 						'back',
