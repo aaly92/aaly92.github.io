@@ -98,8 +98,8 @@ section h1{
 	padding-left: 80px;
 	position: relative;
 	z-index: 1;
-	-webkit-animation: anim 2s linear forwards;
-	animation: anim 2s linear forwards;
+	-webkit-animation: anim 5s linear forwards;
+	animation: anim 5s linear forwards;
 
 	
 }
