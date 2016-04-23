@@ -58,10 +58,29 @@ section h1{
 	text-align: center;
 }
 
-@keyframes animatedBackground {
+@keyframes fadeIt {
 	from { opacity: 1; }
 	to { opacity: : 0.2; }
 }
+
+
+@-webkit-keyframes fadeIt {
+	from {opacity: 1;}
+	to {opacity: : 0.4;}
+}
+@-moz-keyframes fadeIt {
+	from {opacity: 1;}
+	to {opacity: : 0.4;}
+}
+@-o-keyframes fadeIt {
+	from {opacity: 1;}
+	to {opacity: : 0.4;}
+}
+@keyframes fadeIt {
+	from {opacity: 1;}
+	to {opacity: : 0.4;}
+}
+
 
 
 #home {
@@ -71,7 +90,12 @@ section h1{
 	padding-top: 40vh;
 	padding-left: 80px;
 	
-	animation: animatedBackground 40s linear infinite;
+	-webkit-animation: fadeIt 5s linear forwards; 
+    -moz-animation: fadeIt 5s linear forwards; 
+    -o-animation: fadeIt 5s linear forwards;
+	animation: fadeIt 5s linear forwards;
+
+	
 }
 
 #home > div:nth-child(1) {
