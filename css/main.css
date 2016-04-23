@@ -59,17 +59,18 @@ section h1{
 }
 
 @keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
+	from { opacity: 1; }
+	to { background-position: .5; }
 }
+
 
 #home {
 	background-image: url(../assets/background.jpg);
-	width: 560px; 
-	height: 400px; 
-	background-position: 0px 0px;
-	background-repeat: repeat-x;
-
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding-top: 40vh;
+	padding-left: 80px;
+	
 	animation: animatedBackground 40s linear infinite;
 }
 
