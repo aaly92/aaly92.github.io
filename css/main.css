@@ -47,23 +47,25 @@
 	font-size: 15px;
 }
 
-#nav a:hover {
-	color: gray;
-}
-
-
-#nav .navbar-right a:after {
-	content: '';
-	display: block;
-	margin: auto;
-	height: 3px;
-	width: 0px;
-	background: transparent;
-	transition: width .5s ease, background-color .5s ease;
-}
-#nav .navbar-right a:hover:after {
-	width: 100%;
-	background: black;
+@media(min-width:767px){
+	#nav a:hover {
+		color: gray;
+	}
+	
+	
+	#nav .navbar-right a:after {
+		content: '';
+		display: block;
+		margin: auto;
+		height: 3px;
+		width: 0px;
+		background: transparent;
+		transition: width .5s ease, background-color .5s ease;
+	}
+	#nav .navbar-right a:hover:after {
+		width: 100%;
+		background: black;
+	}
 }
 
 section {
