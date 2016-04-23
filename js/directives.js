@@ -1,7 +1,7 @@
 angular.module("directives", ['ngRoute'])
 	.controller('mainCtrl', [ '$scope', '$sce',  function($scope, $sce){
 		console.log('main');	
-		$( "#nav" ).css( "background-color":"transparent" );
+		$( "#nav").css( "background-color","transparent" );
 
 	}])	
 
