@@ -97,8 +97,10 @@ section h1{
 	margin-bottom: 20px;
 }
 
-.project div:nth-child(2){
-	padding-top: 100px;
+@media(max-width:767px){
+	.project div:nth-child(2){
+		padding-top: 100px;
+	}
 }
 
 .project img {
