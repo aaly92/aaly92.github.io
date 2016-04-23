@@ -8,7 +8,7 @@ angular.module("directives", ['ngRoute'])
 		      if (target.length) {
 		        $('html,body').animate({
 		          scrollTop: target.offset().top
-		        }, 500);
+		        }, 300);
 		        return false;
 		      }
 		    }
