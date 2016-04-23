@@ -109,11 +109,13 @@ section h1{
 	animation: anim 5s linear forwards;
 }
 
+/*
 @media(max-width:767px){
 	#home {
 		background-image: none;
 	}
 }
+*/
 
 #textOverlay {
 	font-size: 60px;
