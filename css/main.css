@@ -60,7 +60,7 @@ section h1{
 
 @keyframes animatedBackground {
 	from { opacity: 1; }
-	to { background-position: .5; }
+	to { opacity: : 0.2; }
 }
 
 
