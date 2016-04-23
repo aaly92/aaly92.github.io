@@ -8,6 +8,8 @@ angular.module("directives", ['ngRoute'])
 	}])	
 
 	.controller('digitalArtCtrl', ['$scope', '$sce',function($scope, $sce){
+		$( "#nav" ).removeClass( "navTrans" );
+		$( "#nav" ).addClass( "navWhite" );
 		$scope.imageUrls= [
 						'assets/art/001.png',
 						'assets/art/002.png',
