@@ -20,7 +20,6 @@
 #nav {
 	background-image: none !important;
 	border: none;
-	background-color: white !important;
 	padding: 35px 50px;
 	height: 20vh;
 	box-shadow: none;
@@ -29,6 +28,15 @@
     left: 0;
     top: 0;
     z-index: 100;
+}
+
+#navTrans {
+	background-color: transparent !important;
+}
+
+#navWhite {
+	background-color: white !important;
+
 }
 
 

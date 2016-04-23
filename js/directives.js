@@ -1,7 +1,7 @@
 angular.module("directives", ['ngRoute'])
 	.controller('mainCtrl', [ '$scope', '$sce',  function($scope, $sce){
 		console.log('main');	
-		$( "#nav").css( "background-color","transparent" );
+		$( "#nav" ).addClass( "navTrans" );
 
 	}])	
 
@@ -29,19 +29,20 @@ angular.module("directives", ['ngRoute'])
 	}])
 	
 	.controller('projectsSectionCtrl', ['$scope', '$sce',function($scope, $sce){	
-
+		$( "#nav" ).addClass( "navWhite" );
 	}])
 	
 
 	.controller('aboutSectionsCtrl', ['$scope', '$sce',function($scope, $sce){	
 		console.log('about');	
+		$( "#nav" ).addClass( "navWhite" );
 		$('html, body').animate({
 		    scrollTop: $("#about").offset().top
 		}, 1000);
 	}])
 	.controller('homeSectionsCtrl', ['$scope', '$sce',function($scope, $sce){
 		console.log('home');	
-		
+		$( "#nav" ).addClass( "navTrans" );
 		$('html, body').animate({
 		    scrollTop: $("#home").offset().top
 		}, 1000);
