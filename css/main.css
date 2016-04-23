@@ -20,7 +20,7 @@
 #nav {
 	background-image: none !important;
 	border: none;
-	background-color: white !important;
+	background-color: transparent !important;
 	padding: 35px 50px;
 	height: 20vh;
 	box-shadow: none;
@@ -58,11 +58,19 @@ section h1{
 	text-align: center;
 }
 
-
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
 
 #home {
-	padding-top: 40vh;
-	padding-left: 80px;
+	background-image: url(../assets/background.jpg);
+	width: 560px; 
+	height: 400px; 
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 40s linear infinite;
 }
 
 #home > div:nth-child(1) {
