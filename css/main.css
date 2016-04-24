@@ -21,10 +21,14 @@
 	#logo {
 		padding-top: 6px;
 	}
+	#nav .navbar-nav {
+		background-color:#ffffff;
+	}
 }
 
 #nav {
 	background-image: none !important;
+	background-color: white;
 	border: none;
 	padding: 35px 50px;
 	height: 20vh;
@@ -36,6 +40,14 @@
     z-index: 100;
 }
 
+#nav a {
+	font-family: "moon";
+	color: black;
+	font-weight: 500;
+	padding-left: 30px; 
+	font-size: 15px;
+}
+
 #nav.navTrans {
 	background-color: transparent !important;
 }
@@ -44,19 +56,6 @@
 	background-color: white !important;
 }
 
-@media(max-width:767px){
-	#nav .navbar-nav {
-		background-color:#ffffff;
-	}
-}
-
-#nav a {
-	font-family: "moon";
-	color: black;
-	font-weight: 500;
-	padding-left: 30px; 
-	font-size: 15px;
-}
 
 @media(min-width:767px){
 	#nav a:hover {

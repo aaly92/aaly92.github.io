@@ -18,36 +18,18 @@ angular.module("directives", ['ngRoute'])
 		$('.navbar-collapse a').click(function (e) {
         	$('.navbar-collapse').collapse('toggle');
       	});
-		
 		$( "#nav" ).removeClass( "navWhite" );
 		$( "#nav" ).addClass( "navTrans" );
+
 		
 		$(function () {
 		    $(window).scroll(function () {
 		        if ($(this).scrollTop() > 300) {
-			        if ($(window).width() < 768) {
-						$( "#nav" ).removeClass( "navTrans" );
-						$( "#nav" ).addClass( "navWhite" );
-					}
 		            $('.arrow').fadeOut();
 		        } else {
-			        if ($(window).width() < 768) {
-						$( "#nav" ).removeClass( "navWhite" );
-						$( "#nav" ).addClass( "navTrans" );
-					}
 		            $('.arrow').fadeIn();
 		        }
 		    });
-		
-/*
-		    // scroll body to 0px on click
-		    $('.back-top').click(function () {
-		        $('body,html').animate({
-		            scrollTop: 0
-		        }, 1600);
-		        return false;
-		    });
-*/
 		});
 	
 
@@ -139,7 +121,7 @@ angular.module("directives", ['ngRoute'])
                 .when('/projects',{controller:"projectsSectionCtrl", templateUrl:'views/projects.html'})
                 .when('/gameboy',{controller:"gameboyCtrl", templateUrl:"views/gameboy.html"})
                 .otherwise({redirectTo:'/'});
-                ;
+                
      }]);
 	
 	
