@@ -72,9 +72,6 @@ angular.module("directives", ['ngRoute'])
 						'assets/art/016.png',
 						'assets/art/017.png',
 						'assets/art/018.png',
-						'assets/art/013.png',
-						'assets/art/014.png',
-						'assets/art/015.png',
 					  ]
 		$scope.sketchUrls = [
 						'assets/art/013.png',
