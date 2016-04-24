@@ -122,7 +122,11 @@ section {
 }
 
 #projects {
-	height: 80vh;
+	height: auto;
+}
+
+#projects > h1 {
+	margin-bottom: 60px;
 }
 
 section h1{
