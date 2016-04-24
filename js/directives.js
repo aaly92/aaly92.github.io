@@ -25,8 +25,16 @@ angular.module("directives", ['ngRoute'])
 		$(function () {
 		    $(window).scroll(function () {
 		        if ($(this).scrollTop() > 300) {
+			        if ($(window).width() < 768) {
+						$( "#nav" ).removeClass( "navTrans" );
+						$( "#nav" ).addClass( "navWhite" );
+					}
 		            $('.arrow').fadeOut();
 		        } else {
+			        if ($(window).width() < 768) {
+						$( "#nav" ).removeClass( "navWhite" );
+						$( "#nav" ).addClass( "navTrans" );
+					}
 		            $('.arrow').fadeIn();
 		        }
 		    });
