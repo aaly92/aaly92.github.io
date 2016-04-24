@@ -14,6 +14,11 @@ angular.module("directives", ['ngRoute'])
 		    }
 		  });
 		});
+		
+		$('.navbar-collapse a').click(function (e) {
+        	$('.navbar-collapse').collapse('toggle');
+      	});
+		
 		$( "#nav" ).removeClass( "navWhite" );
 		$( "#nav" ).addClass( "navTrans" );
 		
