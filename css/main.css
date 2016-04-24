@@ -208,7 +208,8 @@ section h1{
 	text-align: center;
 }
 
-.footerSection.home {
+.footerSection.homeFooter {
+	margin-top: 20px;
 	padding-top: 0px;
 	padding-bottom: 0px;	
 	text-align: left;
