@@ -180,6 +180,11 @@ section h1{
 	}
 }
 
+.social{
+	padding-right: 10px;
+}
+
+
 #home > div:nth-child(1) {
 	font-size: 60px;
 }
