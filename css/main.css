@@ -86,7 +86,7 @@ section {
 
 #about {
 	height: auto;
-	background-color: rgba(0, 1, 20, 0.89);
+	background-color: rgba(0, 1, 20, 1);
 	padding-top: 10vh;
 	padding-bottom: 10vh;
 }
@@ -195,7 +195,7 @@ section h1{
 .footerSection {
 	margin-top: 20px;
 	color: white;
-	background-color: rgba(0, 1, 20, 0.89);
+	background-color: rgba(0, 1, 20, 1);
 	padding-top: 10vh;
 	padding-bottom: 10vh;	
 	text-align: center;
