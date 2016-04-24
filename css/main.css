@@ -3,11 +3,6 @@
     src: url(../assets/Moon.otf);
 }
 
-@font-face {
-    font-family: pier;
-    src: url(../assets/pier.otf);
-}
-
 * 
 {
 	font-family: "moon";
@@ -24,30 +19,17 @@
 	#nav .navbar-nav {
 		background-color:#ffffff;
 	}
+	#about {
+		padding-top: 20vh;
+	}
+	#about > div {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+	#textOverlay {
+	    font-size: 40px;
+	}
 }
-
-#nav {
-	background-image: none !important;
-	background-color: white;
-	border: none;
-	padding: 35px 50px;
-	height: 20vh;
-	box-shadow: none;
-	position: fixed;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 100;
-}
-
-#nav a {
-	font-family: "moon";
-	color: black;
-	font-weight: 500;
-	padding-left: 30px; 
-	font-size: 15px;
-}
-
 
 @media(min-width:767px){
 	#nav.navTrans {
@@ -74,7 +56,36 @@
 		width: 100%;
 		background: black;
 	}
+	#about > div {
+		margin-left: 6.667%;
+	} 
+	#home {
+		background-image: none;
+	}
 }
+
+#nav {
+	background-image: none !important;
+	background-color: white;
+	border: none;
+	padding: 35px 50px;
+	height: 20vh;
+	box-shadow: none;
+	position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+#nav a {
+	font-family: "moon";
+	color: black;
+	font-weight: 500;
+	padding-left: 30px; 
+	font-size: 15px;
+}
+
 
 
 section {
@@ -95,21 +106,6 @@ section {
 #about p {
 	font-family: 'Lato', sans-serif;
 } 
-@media(min-width:767px){
-	#about > div {
-		margin-left: 6.667%;
-	} 
-}
-
-@media(max-width:767px){
-	#about {
-		padding-top: 20vh;
-	}
-	#about > div {
-		padding-left: 15%;
-		padding-right: 15%;
-	}
-}
 
 #about h2 {
 	font-family: 'Montserrat', sans-serif;
@@ -158,13 +154,6 @@ section h1{
 }
 
 
-@media(max-width:767px){
-	#home {
-		background-image: none;
-	}
-}
-
-
 #textOverlay {
 	font-size: 60px;
 	position: absolute;
@@ -177,12 +166,6 @@ section h1{
     height: 50vh;
     text-align: center;
 
-}
-
-@media(max-width:767px){
-	#textOverlay {
-	    font-size: 40px;
-	}
 }
 
 .social{
@@ -249,198 +232,15 @@ section h1{
 .img-container {
 	margin-bottom: 50px;
 }
-
-
-.home{
-	background-color: #5f98c6;
-
-}
-
-.project {
-	margin-bottom: 20px;
-}
-
-.project div:nth-child(2){
-	padding-top: 50px;
-}
-@media(max-width:767px){
-	.project div:nth-child(2){
-		padding-top: 0px;
-		padding-bottom: 20px;
-	}
-}
-
-.project img {
-	border-radius: 25px;
-	max-width:100%;
-	max-height:100%;
-}
-
-#back {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  background-color: #BADA55;
-  height: 600px;
-  width: 400px;
-  border-radius: 15px 15px 50px 15px;
-}
-
-#screen {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  background-color: #494949;
-  height: 280px;
-  width: 360px;
-  border-radius: 5px 5px 40px 5px;
-}
-
-#subscreen {
-  position: absolute;
-  height: 218px;
-  width: 250px;
-  top: 75px;
-  left: 105px;
-  border-radius: 3px 3px 3px 3px;
-  background-color: #b7b28f;
-}
-
-#joystickH {
-  position: absolute;
-  background-color: #484848;
-  height: 85px;
-  width: 30px;
-  top: 375px;
-  left: 92px;
-  border-radius: 3px 3px 3px 3px;
-}
-
-#joystickV {
-  position: absolute;
-  background-color: #484848;
-  height: 30px;
-  width: 85px;
-  top: 400px;
-  left: 65px;
-  border-radius: 3px 3px 3px 3px;
-}
-
-#joystickBack {
-  position: absolute;
-  height: 110px;
-  width: 110px;
-  background-color: #dddddd;
-  border-radius: 55px 55px 55px 55px;
-  top: 363px;
-  left: 53px;
-}
-
-#aButton {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px 20px 20px 20px;
-  background-color: #484848;
-  top: 409px;
-  left: 300px;
-  position: absolute;
-}
-#bButton {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px 20px 20px 20px;
-  background-color: #484848;
-  top: 375px;
-  left: 346px;
-  position: absolute;
-}
-
-#start {
-  height: 10px;
-  width: 37px;
-  position: absolute;
-  background-color: #484848;
-  top: 574px;
-  left: 193px;
-  border-radius: 20px 20px 20px 20px;
-}
-
-#select {
-  height: 10px;
-  width: 37px;
-  position: absolute;
-  background-color: #484848;
-  top: 574px;
-  left: 250px;
-  border-radius: 20px 20px 20px 20px;
-}
-
-#gameboyText {
-  position: absolute;
-  left: 131px;
-  top: 295px;
-  font: 19px "Comic Sans MS";
-  color: #b7b28f;
-}
-
-
-
-
-@font-face {
-  font-family: fho;
-  src: url("../fonts/futura-heavy-oblique.ttf"); }
-@-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    transform: translateY(0); }
-  40% {
-    -moz-transform: translateY(-30px);
-    transform: translateY(-30px); }
-  60% {
-    -moz-transform: translateY(-15px);
-    transform: translateY(-15px); } }
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
-  40% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px); }
-  60% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px); } }
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
-  40% {
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px); }
-  60% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px); } }
     
 .arrow {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  margin-left: -20px;
-  width: 70px;
-  height: 70px;
-  background-image: url(../assets/arrow2.png);
-  background-size: contain; 
-  z-index: 10;
+	  position: fixed;
+	  bottom: 0;
+	  left: 50%;
+	  margin-left: -20px;
+	  width: 70px;
+	  height: 70px;
+	  background-image: url(../assets/arrow2.png);
+	  background-size: contain; 
+	  z-index: 10;
   }
-
-/*
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite; }
-*/
