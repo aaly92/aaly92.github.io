@@ -48,16 +48,15 @@
 	font-size: 15px;
 }
 
-#nav.navTrans {
-	background-color: transparent !important;
-}
-
-#nav.navWhite {
-	background-color: white !important;
-}
-
 
 @media(min-width:767px){
+	#nav.navTrans {
+		background-color: transparent !important;
+	}
+	
+	#nav.navWhite {
+		background-color: white !important;
+	}
 	#nav a:hover {
 		color: gray;
 	}
