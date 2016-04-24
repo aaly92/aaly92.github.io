@@ -38,6 +38,12 @@
 	background-color: white !important;
 }
 
+@media(max-width:767px){
+	#nav .navbar-nav {
+		background-color:#ffffff;
+	}
+}
+
 #nav a {
 	font-family: "moon";
 	color: black;
@@ -46,14 +52,7 @@
 	font-size: 15px;
 }
 
-
-@media(max-width:767px){
-	#nav {
-		height: 15vh;
-	}
-	#nav .navbar-nav {
-		background-color:#ffffff;
-	}
+@media(min-width:767px){
 	#nav a:hover {
 		color: gray;
 	}
@@ -72,6 +71,7 @@
 		background: black;
 	}
 }
+
 
 section {
 	height: 100vh;
