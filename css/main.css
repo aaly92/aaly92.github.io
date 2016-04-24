@@ -100,8 +100,8 @@ section {
 
 @media(max-width:767px){
 	#about > div {
-		padding-left: 20%;
-		padding-right: 20%;
+		padding-left: 15%;
+		padding-right: 15%;
 	}
 }
 
