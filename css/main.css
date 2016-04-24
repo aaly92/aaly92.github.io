@@ -94,7 +94,7 @@ section {
 } 
 @media(min-width:767px){
 	#about {
-		padding-top: 20vh;
+		padding-top: 25vh;
 	}
 	#about > div {
 		margin-left: 6.667%;
