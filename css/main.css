@@ -183,6 +183,14 @@ section h1{
 .social{
 	padding-right: 10px;
 }
+.social > img{
+	height:30px;
+	width:30px;
+}
+.social > i{
+	font-size:30px;
+
+}
 
 
 #home > div:nth-child(1) {
