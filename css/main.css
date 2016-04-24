@@ -208,6 +208,12 @@ section h1{
 	text-align: center;
 }
 
+.footerSection, .home {
+	padding-top: 0px;
+	padding-bottom: 0px;	
+	text-align: left;
+}
+
 .footerSection h2 {
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
