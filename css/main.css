@@ -121,6 +121,10 @@ section {
     font-size: 14px;
 }
 
+#projects {
+	height: 80vh;
+}
+
 section h1{
 	font-size: 60px;
 	display: block;
@@ -193,7 +197,6 @@ section h1{
 }
 
 .footerSection {
-	margin-top: 20px;
 	color: white;
 	background-color: rgba(0, 1, 20, 1);
 	padding-top: 10vh;
