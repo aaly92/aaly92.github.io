@@ -193,6 +193,7 @@ section h1{
 }
 
 .footerSection {
+	margin-top: 20px;
 	color: white;
 	background-color: rgba(0, 1, 20, 0.89);
 	padding-top: 10vh;
