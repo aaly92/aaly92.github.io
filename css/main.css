@@ -59,6 +59,11 @@
 		width: 100%;
 		background: black;
 	}
+	#home {
+		background-image: url(../assets/background.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
 	#about > div {
 		margin-left: 6.667%;
 	} 
@@ -142,9 +147,6 @@ section h1{
 }
 
 #home {
-	background-image: url(../assets/background.jpg);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
 	padding-top: 40vh;
 	padding-left: 80px;
 	position: relative;
