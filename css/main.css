@@ -93,15 +93,15 @@ section {
 	font-family: 'Lato', sans-serif;
 } 
 @media(min-width:767px){
-	#about {
-		padding-top: 25vh;
-	}
 	#about > div {
 		margin-left: 6.667%;
 	} 
 }
 
 @media(max-width:767px){
+	#about {
+		padding-top: 20vh;
+	}
 	#about > div {
 		padding-left: 15%;
 		padding-right: 15%;
