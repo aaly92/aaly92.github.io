@@ -144,11 +144,13 @@ section h1{
 }
 
 
+/*
 @media(max-width:767px){
 	#home {
 		background-image: url(../assets/mbackground.png);;
 	}
 }
+*/
 
 
 #textOverlay {
