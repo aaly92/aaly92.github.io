@@ -207,7 +207,7 @@ section h1{
  }
  
  
- @media(max-width:767px){
+ @media(max-width:979px){
 	#logo {
 		padding-top: 6px;
 	}
@@ -233,7 +233,7 @@ section h1{
  	}
 }
 
-@media(min-width:767px){
+@media(min-width: 979px){
 	#nav.navTrans {
 		background-color: transparent !important;
 	}
