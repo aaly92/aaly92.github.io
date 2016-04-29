@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1">
+		<title>Hubspot Cat Page</title>
+		 
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+		<!-- Latest compiled and minified CSS -->
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	</head>
+	<body ng-app="directives">	
+		<section id="nav">
+			<aa-nav
+				logo-text="meh"
+				menu-items= "[
+								{url: '#banner', name:'Home'},
+								{url: '#about', name:'About Us'},
+								{url: '#team', name:'Services'},
+								{url: '#contact', name:'Contact'}
+
+							]"
+				>
+			</aa-nav>
+		</section>
+		<section id="banner">
+			<aa-banner 
+				background-url="assets/banner.jpg"
+				banner-text-header="oh great..." 
+				banner-text-subheader="I'm a background">
+			</aa-banner>
+		</section>
+		<section id="about">
+			<aa-about
+				header="Lorem Ipsum is simply dummy" 
+				paragraph="Lorem Ipsum dummy text of the printing and typesetting industry. 
+						   Lorem Ipsum has been the industry's standard dummy text ever since 
+						   the 1500s, when and unknown"
+				imgs =  "[
+							{imgUrl: 'assets/grumpy1.jpg', text: 'lorem ipsum'}, 
+							{imgUrl: 'assets/grumpy1.jpg', text: 'lorem ipsum lorem ipsum'}, 
+							{imgUrl: 'assets/grumpy1.jpg', text: 'lorem ipsum'}
+						]"
+				>
+			</aa-about>
+		</section>
+		<section id="team">
+			<aa-team
+				profiles =  "[
+							{	imgUrl: 'assets/grumpy2.jpg', 
+								header: 'Lorem Ipsum is simply',
+								description: 'lorem ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industys standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged'
+							}, 
+							{
+								imgUrl: 'assets/grumpy2.jpg', 
+								header: 'Lorem Ipsum is simply', 
+								description: 'lorem ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industys standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged'
+							}, 
+							{
+								imgUrl: 'assets/grumpy2.jpg', 
+								header: 'Lorem Ipsum is simply', 
+								description: 'lorem ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industys standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged'
+							}
+						]"
+			>
+				
+			</aa-team>
+		</section>
+		<section class='clearfix' id="footer">
+			<aa-footer-section
+				section-name = "Sub Menu" 
+				menu-Items = "[
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'}
+								]"
+			></aa-footer-section>
+			<aa-footer-section
+				section-name = "Sub Menu" 
+				menu-Items = "[
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'}
+								]"
+			></aa-footer-section>
+			<aa-footer-section
+				section-name = "Sub Menu" 
+				menu-Items = "[
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'}
+								]"
+			></aa-footer-section>
+			<aa-footer-section
+				section-name = "Sub Menu" 
+				menu-Items = "[
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'},
+									{url: 'hubspot.com', name:'MenuItem'}
+								]"
+			></aa-footer-section>
+
+			</aa-footer>
+		</section>
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+        <script src="js/directives.js"></script>
+	</body>
+</html>
