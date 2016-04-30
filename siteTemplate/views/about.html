@@ -1,6 +1,6 @@
-<h1>{{ header }} </h1>
-<p> {{ paragraph }}</p>
-<div id="about-container">
-	<aa-hover-image ng-repeat="img in imgs" img-url="{{img.imgUrl}}" hover-text="{{img.text}}">
-	</aa-hover-image>
+<h1 class="about-header">{{ header }} </h1>
+<p class="about-paragraph"> {{ paragraph }}</p>
+<div class="about-img-container">
+	<aa-image-and-text-overlay ng-repeat="img in imgs" img-url="{{img.imgUrl}}" text-overlay="{{img.text}}">
+	</aa-image-and-text-overlay>
 </div>

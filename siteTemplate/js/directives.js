@@ -1,8 +1,4 @@
 angular.module("directives", [])
-
-	.controller('navCtrl', [ '$scope', '$sce',  function($scope, $sce){
-
-	}])
 	.directive("aaNav", function()
 	{
 		return {
@@ -12,14 +8,8 @@ angular.module("directives", [])
 				logoText: "@"
 			},
 			templateUrl: "views/nav.html",
-			controller: "navCtrl"
 		};
 	})
-
-
-	.controller('bannerCtrl', [ '$scope', '$sce',  function($scope, $sce){
-
-	}])
 	.directive("aaBanner", function()
 	{
 		return {
@@ -30,13 +20,8 @@ angular.module("directives", [])
 				bannerTextSubheader : "@"
 			},
 			templateUrl: "views/banner.html",
-			controller: "bannerCtrl"
 		};
 	})
-	
-	.controller('aboutCtrl', [ '$scope', '$sce',  function($scope, $sce){
-
-	}])
 	.directive("aaAbout", function()
 	{
 		return {
@@ -47,46 +32,29 @@ angular.module("directives", [])
 				imgs: "=",
 			},
 			templateUrl: "views/about.html",
-			controller: "aboutCtrl"
 		};
 	})
-	
-	.controller('teamCtrl', [ '$scope', '$sce',  function($scope, $sce){
-
-	}])
-	
-	.directive("aaTeam", function()
+	.directive("aaServices", function()
 	{
 		return {
 			restrict: "AE",
 			scope: { 
 				profiles: "=",
 			},
-			templateUrl: "views/team.html",
-			controller: "teamCtrl"
+			templateUrl: "views/services.html",
 		};
 	})
-	
-	
-	.controller('hoverImageCtrl', [ '$scope', '$sce',  function($scope, $sce){
-
-	}])
-	.directive("aaHoverImage", function()
+	.directive("aaImageAndTextOverlay", function()
 	{
 		return {
 			restrict: "AE",
 			scope: { 
-				hoverText : "@",
+				textOverlay : "@",
 				imgUrl: "@"
 			},
-			templateUrl: "views/hoverImage.html",
-			controller: "hoverImageCtrl"
+			templateUrl: "views/imageAndTextOverlay.html",
 		};
 	})
-	
-	.controller('imageAndTextCtrl', [ '$scope', '$sce',  function($scope, $sce){
-		
-	}])
 	.directive("aaImageAndText", function()
 	{
 		return {
@@ -97,10 +65,8 @@ angular.module("directives", [])
 				imgUrl: "@"
 			},
 			templateUrl: "views/imageAndText.html",
-			controller: "imageAndTextCtrl"
 		};
 	})
-
 	.controller('footerSectionCtrl', [ '$scope', '$sce',  function($scope, $sce){
 		$scope.showSubmenu=false;
 		if ($(window).width() >= 768) {
@@ -108,7 +74,6 @@ angular.module("directives", [])
 		}
 
 		$( window ).resize(function() {
-			console.log($(window).width());
 			if ($(window).width() >= 768) {
 				$scope.showSubmenu = true;
 			} else {

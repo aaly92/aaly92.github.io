@@ -6,12 +6,8 @@
 		<title>Hubspot Cat Page</title>
 		 
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
-
-		<!-- Latest compiled and minified CSS -->
-		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	</head>
+
 	<body ng-app="directives">	
 		<section id="nav">
 			<aa-nav
@@ -19,19 +15,16 @@
 				menu-items= "[
 								{url: '#banner', name:'Home'},
 								{url: '#about', name:'About Us'},
-								{url: '#team', name:'Services'},
+								{url: '#services', name:'Services'},
 								{url: '#contact', name:'Contact'}
-
 							]"
-				>
-			</aa-nav>
+				></aa-nav>
 		</section>
 		<section id="banner">
 			<aa-banner 
 				background-url="assets/banner.jpg"
 				banner-text-header="oh great..." 
-				banner-text-subheader="I'm a background">
-			</aa-banner>
+				banner-text-subheader="I'm a background"></aa-banner>
 		</section>
 		<section id="about">
 			<aa-about
@@ -44,11 +37,10 @@
 							{imgUrl: 'assets/grumpy1.jpg', text: 'lorem ipsum lorem ipsum'}, 
 							{imgUrl: 'assets/grumpy1.jpg', text: 'lorem ipsum'}
 						]"
-				>
-			</aa-about>
+				></aa-about>
 		</section>
-		<section id="team">
-			<aa-team
+		<section id="services">
+			<aa-services
 				profiles =  "[
 							{	imgUrl: 'assets/grumpy2.jpg', 
 								header: 'Lorem Ipsum is simply',
@@ -64,10 +56,7 @@
 								header: 'Lorem Ipsum is simply', 
 								description: 'lorem ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the industys standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged'
 							}
-						]"
-			>
-				
-			</aa-team>
+						]"></aa-services>
 		</section>
 		<section class='clearfix' id="footer">
 			<aa-footer-section
@@ -79,8 +68,7 @@
 									{url: 'hubspot.com', name:'MenuItem'},
 									{url: 'hubspot.com', name:'MenuItem'},
 									{url: 'hubspot.com', name:'MenuItem'}
-								]"
-			></aa-footer-section>
+								]"></aa-footer-section>
 			<aa-footer-section
 				section-name = "Sub Menu" 
 				menu-Items = "[
@@ -90,8 +78,7 @@
 									{url: 'hubspot.com', name:'MenuItem'},
 									{url: 'hubspot.com', name:'MenuItem'},
 									{url: 'hubspot.com', name:'MenuItem'}
-								]"
-			></aa-footer-section>
+								]"></aa-footer-section>
 			<aa-footer-section
 				section-name = "Sub Menu" 
 				menu-Items = "[
@@ -101,8 +88,7 @@
 									{url: 'hubspot.com', name:'MenuItem'},
 									{url: 'hubspot.com', name:'MenuItem'},
 									{url: 'hubspot.com', name:'MenuItem'}
-								]"
-			></aa-footer-section>
+								]"></aa-footer-section>
 			<aa-footer-section
 				section-name = "Sub Menu" 
 				menu-Items = "[
@@ -112,11 +98,9 @@
 									{url: 'hubspot.com', name:'MenuItem'},
 									{url: 'hubspot.com', name:'MenuItem'},
 									{url: 'hubspot.com', name:'MenuItem'}
-								]"
-			></aa-footer-section>
-
-			</aa-footer>
+								]"></aa-footer-section>
 		</section>
+		
 		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
         <script src="js/directives.js"></script>

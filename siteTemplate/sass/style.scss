@@ -9,89 +9,102 @@ h1 {
 }
 
 aa-banner {
+	h1.bannerText {
+		color: white;
+		position: absolute;
+	}
    	@media (max-width: 768px) {
-		img {
+		img.bannerImg {
 	    	width: 100vw;
 	    	height: 30vh;
 	    	position: relative;
 	    	margin-top: 70px;
    		}
-   		h1{
+   		h1.bannerText{
 			font-size: 30px;
 		}
-		h1:nth-child(2){
+		h1.bannerText:nth-child(2){
 			top: 20%; 
 			left: 10%; 
 		}
-		h1:nth-child(3){
-			top: 23%; 
+		h1.bannerText:nth-child(3){
+			top: 25%; 
 			left: 10%; 
 		}
 	}
 	@media (min-width: 768px) {
-		img {
+		img.bannerImg {
 			width: 100%;
 			height: 100%;
 			position: relative;
 		}
-		h1:nth-child(2){
+		h1.bannerText:nth-child(2){
 			top: 12%; 
 			left: 10%; 
 		}
-		h1:nth-child(3){
+		h1.bannerText:nth-child(3){
 			top: 17%; 
 			left: 10%; 
 		}
 	}
-	h1{
-		color: white;
-		position: absolute;
-	}
 }
 
 #about {
-   	@media (max-width: 768px) {
+	border-bottom: 1px solid lightgray;
+	@media (max-width: 768px) {
 		padding: 8% 7% 3% 5%;
 	    margin-bottom: 40px;
 	}
 	@media (min-width: 768px) {
 		padding: 0% 20% 3% 20%;
 	}
-	border-bottom: 1px solid lightgray;
-	h1, p{
+	h1.about-header, p{
 		color: gray;
-		text-align: center
+		text-align: center;
 	}
 }
 
 aa-about {
-	#about-container {
+	.about-img-container {
 		text-align: center;
 	}
-	h1{
+	h1.about-header{
 		font-weight: 200;
 	}
-	p {
+	p.about-paragraph {
 		padding-bottom: 40px;
 	}
 	@media (max-width: 768px) {
-		h1 {
+		h1.about-header {
 			padding: 10px 0px 30px 0px;
 		}
 	}
 	@media (min-width: 768px) {
-		h1 {
+		h1.about-header {
 			padding: 60px 0px 20px 0px;
 		}
 	}
-
 }
 
-aa-hover-image {
-	div {
+aa-image-and-text-overlay {
+	> div {
 		display: inline-block;
 		position: relative;
 		margin: 0px 5px;
+		img {
+		    width: 100%;
+		}
+		span {
+		    position: absolute;
+		    width: 95%;
+		    height: 50%;
+		    top: 1.5%;
+		    left: 2.5%;
+		    background-color: rgba(23, 23, 23, 0.7);
+		    color: white;
+		    margin: auto auto;
+		    padding-top: 45%;
+		}
 	}
 
 	@media (max-width: 768px) {
@@ -104,65 +117,48 @@ aa-hover-image {
 			width: 25%;
 		}	
 	}
-
-	img{
-	    width: 100%;
-	}
-
-	span {
-	    position: absolute;
-	    width: 95%;
-	    height: 50%;
-	    top: 1.5%;
-	    left: 2.5%;
-	    background-color: rgba(23, 23, 23, 0.7);
-	    color: white;
-	    margin: auto auto;
-	    padding-top: 45%;
-	}
 }
-#team {
+
+#services {
 	padding: 3% 20% 3% 20%;
 }
 
 aa-image-and-text {
 	color: gray;
-	.image-and-text-image-container {
+	div.image-and-text-image-container {
 		display: inline-block;
 		width: 100%;
 		margin-bottom: 60px;
-		.image-and-text-thumb {
+		div.image-and-text-thumb {
 			height: 100%;
+			> img {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
 		}
-
+		div.image-and-text-content {
+			> h3 {
+				margin-top: 0px;
+				font-weight: 500;
+			}
+			> p {
+				font-weight: 200;
+			}
+		}
 		@media (max-width: 768px) {
-			.image-and-text-thumb {
+			div.image-and-text-thumb {
 				width: 100% ;
 			    padding-bottom: 20px;
 			}
 		}
 		@media (min-width: 768px) {
-			.image-and-text-thumb {
+			div.image-and-text-thumb {
 				width: 17% ;
 				float: left;
 			}	
-			.image-and-text-content {
+			div.image-and-text-content {
 				margin-left: 23%;
-			}
-		}
-
-		img {
-			width: 100%;
-			height: 100%;
-			display: block;
-		}
-		.image-and-text-content {
-			h3 {
-				margin-top: 0px;
-				font-weight: 500;
-			}
-			p {
-				font-weight: 200;
 			}
 		}
 	}
@@ -200,7 +196,7 @@ aa-nav {
 			ul {
 				margin: 0px 0px 6px 0px;
 				a,a:visited {
-					padding: 15px;
+					padding: 10px;
 				}
 				width:100%;
 			}
@@ -261,7 +257,7 @@ aa-footer-section {
 	}
 }
 
-/*Not my code. Just the standard clearfix*/
+/*The standard clearfix*/
 
 .clearfix:after {
      visibility: hidden;
