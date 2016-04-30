@@ -13,25 +13,29 @@ h1 {
     position: relative;
     margin-top: 70px; }
   aa-banner h1 {
-    font-size: 30px; } }
+    font-size: 30px; }
+  aa-banner h1:nth-child(2) {
+    top: 20%;
+    left: 10%; }
+  aa-banner h1:nth-child(3) {
+    top: 23%;
+    left: 10%; } }
 
 @media (min-width: 768px) {
   aa-banner img {
     width: 100%;
     height: 100%;
-    position: relative; } }
+    position: relative; }
+  aa-banner h1:nth-child(2) {
+    top: 12%;
+    left: 10%; }
+  aa-banner h1:nth-child(3) {
+    top: 17%;
+    left: 10%; } }
 
 aa-banner h1 {
   color: white;
   position: absolute; }
-
-aa-banner h1:nth-child(2) {
-  top: 12%;
-  left: 10%; }
-
-aa-banner h1:nth-child(3) {
-  top: 17%;
-  left: 10%; }
 
 #about {
   border-bottom: 1px solid lightgray; }

@@ -19,6 +19,14 @@ aa-banner {
    		h1{
 			font-size: 30px;
 		}
+		h1:nth-child(2){
+			top: 20%; 
+			left: 10%; 
+		}
+		h1:nth-child(3){
+			top: 23%; 
+			left: 10%; 
+		}
 	}
 	@media (min-width: 768px) {
 		img {
@@ -26,19 +34,18 @@ aa-banner {
 			height: 100%;
 			position: relative;
 		}
+		h1:nth-child(2){
+			top: 12%; 
+			left: 10%; 
+		}
+		h1:nth-child(3){
+			top: 17%; 
+			left: 10%; 
+		}
 	}
 	h1{
 		color: white;
 		position: absolute;
-	}
-
-	h1:nth-child(2){
-		top: 12%; 
-		left: 10%; 
-	}
-	h1:nth-child(3){
-		top: 17%; 
-		left: 10%; 
 	}
 }
 
