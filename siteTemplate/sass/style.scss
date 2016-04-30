@@ -14,6 +14,7 @@ aa-banner {
 	    	width: 100vw;
 	    	height: 30vh;
 	    	position: relative;
+	    	margin-top: 70px;
    		}
    		h1{
 			font-size: 30px;
@@ -205,6 +206,13 @@ aa-footer-section {
 		@media (max-width: 768px) {
 			width: 100%;
 			text-align: center;
+			h3 {
+				cursor: pointer;
+				>span{
+					margin-left: 20px;
+					font-weight: 700;
+				}
+			}
 		}
 		@media (min-width: 768px) {
 			width: 25%;

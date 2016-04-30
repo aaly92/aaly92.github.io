@@ -10,7 +10,8 @@ h1 {
   aa-banner img {
     width: 100vw;
     height: 30vh;
-    position: relative; }
+    position: relative;
+    margin-top: 70px; }
   aa-banner h1 {
     font-size: 30px; } }
 
@@ -155,7 +156,12 @@ aa-footer-section > div {
   @media (max-width: 768px) {
     aa-footer-section > div {
       width: 100%;
-      text-align: center; } }
+      text-align: center; }
+      aa-footer-section > div h3 {
+        cursor: pointer; }
+        aa-footer-section > div h3 > span {
+          margin-left: 20px;
+          font-weight: 700; } }
   @media (min-width: 768px) {
     aa-footer-section > div {
       width: 25%; } }

@@ -103,7 +103,20 @@ angular.module("directives", [])
 
 	.controller('footerSectionCtrl', [ '$scope', '$sce',  function($scope, $sce){
 		$scope.showSubmenu=false;
+		if ($(window).width() >= 768) {
+			$scope.showSubmenu = true;
+		}
 
+		$( window ).resize(function() {
+			console.log($(window).width());
+			if ($(window).width() >= 768) {
+				$scope.showSubmenu = true;
+			} else {
+				$scope.showSubmenu = false;
+			}
+			$scope.$apply();
+
+		});
 		$scope.toggle = function() {
 			$scope.showSubmenu = !$scope.showSubmenu;
 		}
