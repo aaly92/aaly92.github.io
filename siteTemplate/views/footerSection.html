@@ -1,5 +1,5 @@
 <div>
 	<h3 class="hidden-xs">{{sectionName}}</h3>
 	<h3 class="visible-xs" ng-click="toggle()">{{sectionName}}<span>{{ showSubmenu ? '-' : '+' }}</span></h3>
-	<div ng-show="showSubmenu" ng-repeat="item in menuItems"><a href={{ item.url}}>{{item.name}}</a></div>
+	<div ng-show="showSubmenu" ng-repeat="item in menuItems"><a href="{{ item.url}}">{{item.name}}</a></div>
 </div>
