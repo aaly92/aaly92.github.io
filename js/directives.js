@@ -39,6 +39,12 @@ angular.module("directives", ['ngRoute'])
 		$( "#nav" ).removeClass( "navTrans" );
 		$( "#nav" ).addClass( "navWhite" );
 		$scope.imageUrls= [
+						'assets/art/001a.png',
+						'assets/art/001b.png',
+						'assets/art/001c.png',
+						'assets/art/001d.png',
+						'assets/art/001e.png',
+						'assets/art/001f.png',
 						'assets/art/001.png',
 						'assets/art/002.png',
 						'assets/art/003.png',
