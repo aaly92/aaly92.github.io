@@ -192,11 +192,6 @@ section h1{
 	  z-index: 10;
   }
  
- .project {
- 	margin-bottom: 20px;
- 	height: 500px;
- }
- 
  .project div:nth-child(2){
  	padding-top: 50px;
  }
@@ -233,9 +228,15 @@ section h1{
  		padding-bottom: 20px;
  	}
  	.project {
- 		margin-bottom: 20px;
+	 	margin-bottom: 20px;
+	 	height: 500px;
  	}
 }
+
+ .project {
+ 	margin-bottom: 20px;
+ 	height: 500px;
+ }
 
 @media(min-width: 979px){
 	#nav.navTrans {
