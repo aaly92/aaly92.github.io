@@ -232,6 +232,9 @@ section h1{
  		padding-top: 0px;
  		padding-bottom: 20px;
  	}
+ 	.project {
+ 		margin-bottom: 20px;
+ 	}
 }
 
 @media(min-width: 979px){
